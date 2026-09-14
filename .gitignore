@@ -1,5 +1,14 @@
 .DS_Store
 .idea/
 __pycache__/
-/results/nonadj_out_atp-20.csv
-/results.zip
+results/
+convergence -old/
+results - old/
+extension/
+.venv/
+
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.html

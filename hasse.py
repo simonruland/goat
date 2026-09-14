@@ -101,9 +101,9 @@ if __name__ == '__main__':
     # plt_ctff_l = [5, None]
 
     ver_l = ['nonadj']
-    assc_l = ['atp', 'wta']
-    ctff_l = [3, 5]
-    plt_ctff_l = [5, None]
+    assc_l = ['atp']
+    ctff_l = [3]
+    plt_ctff_l = [5]
 
     for ver in ver_l:
         for assc in assc_l:
