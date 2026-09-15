@@ -8,7 +8,7 @@ def main(w_mat, version, no_samples):
     w_mat += np.ones(w_mat.shape) / (w_mat.shape[0] ** 2)
 
     if version == 'nonadj':
-        mod = 2* int(w_mat.shape[0] * np.log2(w_mat.shape[0]))
+        mod = int(w_mat.shape[0] * np.log2(w_mat.shape[0]))
         trans = np.array([(i, j) for i in range(w_mat.shape[0]) for j in range(i + 1, w_mat.shape[0])])
         trans_supp = np.array([
             {(idx, (i, j)) for idx, (i, j) in enumerate(trans) if i == h or j == h} for h in range(w_mat.shape[0])

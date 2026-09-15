@@ -12,3 +12,4 @@ extension/
 *.jpeg
 *.pdf
 *.html
+*.download
