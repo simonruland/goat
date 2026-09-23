@@ -103,7 +103,7 @@ def main(version, association, cutoff):
         )
         
         fig.write_image(
-            './compare_methods/compare_methods_{0}-{1}-{2}-{3}.pdf'.format(method, version, association, cutoff)
+            './benchmark/benchmark_{0}-{1}-{2}-{3}.pdf'.format(method, version, association, cutoff)
         )
         
 if __name__ == '__main__':
