@@ -56,7 +56,7 @@ def main(version, association, cutoff):
     extension_df = extension_df.rename(columns={'rank': 'pagerank'})
 
     wta_names = ["Steffi Graf", "Serena Williams", "Martina Navratilova"]
-    atp_names = ["Roger Federer", "Novak Djokovic", "Rafael Nadal", "Jimmy Connors", "Andre Agassi"]
+    atp_names = [ "Novak Djokovic", "Rafael Nadal", "Jimmy Connors", "Andre Agassi"]
     names = wta_names if association == 'wta' else atp_names
         
     for y_col, method in zip(['weeks', 'pagerank'], ['traditional', 'pagerank']):        
@@ -99,7 +99,16 @@ def main(version, association, cutoff):
             font=dict(
                 family="Serif",
                 size=10
-            )
+            ),
+            legend=dict(
+            x=0.99,
+            xanchor="right",
+            y=0.99,
+            yanchor="top",
+            bgcolor="rgb(255, 255, 255)",
+            bordercolor="black",
+            borderwidth=2
+            ),
         )
         
         fig.write_image(

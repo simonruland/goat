@@ -95,14 +95,14 @@ def adjacency(version, association, cutoff):
         ))
 
     fig.update_layout(
-        plot_bgcolor=colors["white"],
         width=800,
         height=800,
         xaxis_title=r"$\text{Player } i$",
         yaxis_title=r"$\text{Player } j$",
         font=dict(
             family="Serif",
-            size=10
+            size=10,
+            color=colors["black"]
         ),
         legend=dict(
             x=0.99,

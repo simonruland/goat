@@ -151,18 +151,18 @@ def plot_reversal(version, association):
 
     fig = go.Figure()
 
-    fig.add_trace(go.Histogram(name='No Reversal', x=distance[no_reversal], marker_color=colors['skyblue']))
-    fig.add_trace(go.Histogram(name='Strong Reversal', x=distance[strong_reversal], marker_color=colors['vermillion']))
-    fig.add_trace(go.Histogram(name='Weak Reversal', x=distance[weak_reversal], marker_color=colors['orange']))
-    fig.add_trace(go.Histogram(name='Incomparable', x=distance[incomparable], marker_color=colors['black']))
+    fig.add_trace(go.Histogram(name='No Reversal', x=distance[no_reversal], marker_color=colors['skyblue'], autobinx=False, xbins=dict(start=-500, end=500, size=10)))
+    fig.add_trace(go.Histogram(name='Strong Reversal', x=distance[strong_reversal], marker_color=colors['vermillion'], autobinx=False, xbins=dict(start=-500, end=500, size=10)))
+    fig.add_trace(go.Histogram(name='Weak Reversal', x=distance[weak_reversal], marker_color=colors['orange'], autobinx=False, xbins=dict(start=-500, end=500, size=10)))
+    fig.add_trace(go.Histogram(name='Incomparable', x=distance[incomparable], marker_color=colors['black'], autobinx=False, xbins=dict(start=-500, end=500, size=10)))
 
     fig.update_layout(
         barmode='stack',
-        xaxis_title='PageRank Reversal Magnitude',
+        xaxis_title='PageRank Reversal Value',
         yaxis_title='Count',
         font=dict(
             family="Serif",
-            size=10
+            size=10,
         ),
         legend=dict(
             x=0.99,
